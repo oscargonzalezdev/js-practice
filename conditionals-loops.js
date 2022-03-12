@@ -145,3 +145,6 @@ switch (caracter) {
     }
 } else {console.log("-")}
 };
+
+let some = 2;
+console.log(typeof(some));
