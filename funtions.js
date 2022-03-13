@@ -2,7 +2,7 @@
 
 // Module: Funtions
 
-//Exercise 1
+// Exercise 1
 
 function sayHello (language){
     switch (language){
