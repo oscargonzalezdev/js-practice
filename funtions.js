@@ -70,7 +70,7 @@ function parentFunction() {
   }
   childFunction();
 }
-parentFunction(); */
+parentFunction(); 
 
 // Exercise 5
 // Define function welcome() that will receive one argument, your name, and greet you with your name.
@@ -112,3 +112,50 @@ function printArrElements(someArr){
     }
 }
 printArrElements(ironCities);
+
+// Exercise 9
+// Define an array of your favorite cities and pass it as an argument to the previously defined function. Invoke a function.
+
+let myCities = ['Freiburg', 'Zürich', 'Albacete'];
+printArrElements(myCities);
+
+// Define a function printEvens(someArr) and use the ironCities array and print only its even elements.
+let ironCities = ['Amsterdam', 'Barcelona', 'Berlin', 'Lisbon', 'Madrid', 'Mexico City', 'Miami', 'Paris', 'Sao Paulo'];
+function printEvens(newArr){
+    let evenElements = [];
+    for (let i=0; i< newArr.length; i++){
+        if (newArr.indexOf(newArr[i])%2 == 0){
+            evenElements.push(newArr[i]);
+        }
+    }
+    console.table(evenElements);
+}
+printEvens(ironCities);
+*/
+
+// Exercise 10
+// Define a function that will receive an array as an argument and calculate a sum of all its elements.
+// How would you concatenate $ sign in front of the sum?
+
+const prices = [5, 7.99, 9.99, 0.99, 21];
+
+function sumElements (someArr){
+    let result = 0;
+    for (let i=0; i<someArr.length; i++){
+        result += someArr[i];
+    }
+    console.log(`$ ${result}`);
+}
+sumElements(prices);
+
+// Exercise 11
+// Define a function stringToLetters() that receives a string as an argument and returns an array of its letters.
+
+function stringToLetters(myString){
+    let arrLetters = [];
+    for (let i=0; i<myString.length; i++){
+        arrLetters.push(myString[i]);
+    }
+    console.table(arrLetters);
+}
+stringToLetters("Hello");
