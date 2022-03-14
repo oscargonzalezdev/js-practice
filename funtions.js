@@ -131,7 +131,6 @@ function printEvens(newArr){
     console.table(evenElements);
 }
 printEvens(ironCities);
-*/
 
 // Exercise 10
 // Define a function that will receive an array as an argument and calculate a sum of all its elements.
@@ -159,3 +158,65 @@ function stringToLetters(myString){
     console.table(arrLetters);
 }
 stringToLetters("Hello");
+
+// Exercise 12
+// Define a function that loop through the following array and print the type of each element of the array in the console.
+
+const mixedArray = [123, 'abc', true, { a: 1 }, ['js', 'node', 'react'], undefined];
+
+function printTypeOf (arr){
+    arr.forEach(element => {
+        console.log(`${element} is of type: ${typeof element}.`);
+    });
+}
+
+printTypeOf(mixedArray);
+
+// Exercise 13
+// Define a function getCredentials() that will receive the following object as argument and print the following result:
+// Username is: ironhacker and the password is: 123iron345.
+
+let user = {
+    username: 'ironhacker',
+    password: '123iron345'
+  };
+
+  function getCredentials(object){
+      console.log(`Username is: ${object.username} and the password is: ${object.password}.`);
+  }
+
+  getCredentials(user);
+
+  */
+
+  // Exercise 14
+
+  let property = {
+    owner: {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 44
+    },
+    isForSale: false,
+    sqrm: 120,
+    address: {
+      street: 'Happy St',
+      number: 123,
+      city: 'Miami',
+      state: 'FL',
+      country: 'US'
+    },
+    amenities: ['pool', 'tennis court', 'private parking', 'yard']
+  };
+  
+function checkProperty(object){
+    switch (true) {
+        case object.isForSale === true:
+            console.log(`The owner, ${object.owner.firstName} ${object.owner.lastName} put the home for sale! The property has ${object.amenities.length} amenities.`);    
+            break;
+        default:
+            console.log(`The home in ${object.address.street} no. ${object.address.number} is not for sale.`)
+            break;
+    }
+}
+  checkProperty(property);
