@@ -3,6 +3,7 @@
 // Module: Funtions
 
 // Exercise 1
+/*
 
 function sayHello (language){
     switch (language){
@@ -69,4 +70,45 @@ function parentFunction() {
   }
   childFunction();
 }
-parentFunction();
+parentFunction(); */
+
+// Exercise 5
+// Define function welcome() that will receive one argument, your name, and greet you with your name.
+
+function welcome(name){
+    console.log(`Welcome ${name}!`);
+}
+welcome('Oscar');
+
+// Exercise 6
+// Define a function printToTwenty() that will print the numbers from 0 to 20 to the console.
+
+function printToTwenty (){
+    for (let i=0; i<=20; i++){
+        console.log(i);
+    }
+}
+printToTwenty();
+
+// Exercise 7
+// Define a function printNumbers() that receives one argument and prints the numbers from 0 to whatever number we pass to it as an argument.
+
+function printNumbers(x){
+    for (let i = 0; i <= x; i++){
+        console.log(i);
+    }
+}
+printNumbers('15');
+
+// Exercise 8
+// Define a function printArrElements(someArr) that will loop through array and print all the elements of that array.
+// Use the following array to pass it as an argument to the function you have just defined:
+
+let ironCities = ['Amsterdam', 'Barcelona', 'Berlin', 'Lisbon', 'Madrid', 'Mexico City', 'Miami', 'Paris', 'Sao Paulo'];
+
+function printArrElements(someArr){
+    for (let i=0; i < someArr.length; i++){
+        console.log(someArr[i]);
+    }
+}
+printArrElements(ironCities);

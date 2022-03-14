@@ -101,3 +101,56 @@ console.table(products);
 console.log(`There are ${products.length} phones availables: ${products[0].name} and ${products[1].name}.`)
 console.log(`The price of ${products[0].name} is: ${products[0].price}`);
 
+// Nesting Arrays and Objects. Exercise 2
+
+let course = {
+    name: 'Web Development',
+    type: ['full-time', 'part-time'],
+    topics: ['HTML/CSS & Responsive Design', 'JavaScript', 'MongoDB', 'Node', 'Express', 'React']
+  };
+console.log(course.type[0]);
+console.log(`The most familiar topic is: ${course.topics[1]} and the least familiar topic is: ${course.topics[4]}`);
+
+// Nesting Arrays and Objects. Exercise 3
+
+let student = {
+    firstName: 'Ana',
+    lastName: 'Blair',
+    course: {
+      name: 'Web Development',
+      type: 'part-time'
+    },
+    attendedIn: 'Madrid',
+    address: {
+      street: 'Happy Street',
+      number: 123,
+      city: 'Barcelona',
+      zip: 08015,
+      country: 'Spain'
+    }
+  };
+  
+  console.log(student.course.name); 
+  // => Web Development
+  console.log(student.address.street); 
+  // => Happy Street
+  console.log(`Ana moved from ${student.address.city} to ${student.attendedIn} to take ${student.course.type} ${student.course.name} course`);
+  // => .
+  
+
+  // Challenge
+
+  let pizzas = [
+    { type: 'pineapple', size: 'M'},
+    { type: 'pepperoni', size: 'S'},
+    { type: 'mushrooms', size: 'L'},
+    { type: 'pineapple', size: 'S'},
+  ];
+ 
+  let newArray = [];
+  for (let i=0; i<pizzas.length-1; i++){
+  if (pizzas[i].type != 'pineapple'){
+    newArray.push(pizzas[i]);
+  }
+}
+ console.table(newArray);
