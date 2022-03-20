@@ -154,3 +154,9 @@ let student = {
   }
 }
  console.table(newArray);
+
+// Write a recursive function, sum(arr, n), that returns the sum of the first n elements of an array arr.
+
+let myArr = [2, 4, 1, 3];
+let result = myArr.reduce();
+conslole.log(reduce);

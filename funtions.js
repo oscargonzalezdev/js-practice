@@ -3,7 +3,6 @@
 // Module: Funtions
 
 // Exercise 1
-/*
 
 function sayHello (language){
     switch (language){
@@ -104,14 +103,14 @@ printNumbers('15');
 // Define a function printArrElements(someArr) that will loop through array and print all the elements of that array.
 // Use the following array to pass it as an argument to the function you have just defined:
 
-let ironCities = ['Amsterdam', 'Barcelona', 'Berlin', 'Lisbon', 'Madrid', 'Mexico City', 'Miami', 'Paris', 'Sao Paulo'];
+let ironCities1 = ['Amsterdam', 'Barcelona', 'Berlin', 'Lisbon', 'Madrid', 'Mexico City', 'Miami', 'Paris', 'Sao Paulo'];
 
 function printArrElements(someArr){
     for (let i=0; i < someArr.length; i++){
         console.log(someArr[i]);
     }
 }
-printArrElements(ironCities);
+printArrElements(ironCities1);
 
 // Exercise 9
 // Define an array of your favorite cities and pass it as an argument to the previously defined function. Invoke a function.
@@ -187,7 +186,6 @@ let user = {
 
   getCredentials(user);
 
-  */
 
   // Exercise 14
 
@@ -220,3 +218,86 @@ function checkProperty(object){
     }
 }
   checkProperty(property);
+
+  // Exercise 15
+
+  let matrix = [
+    [
+      { product: "MacBook", price: 1019, category: 'tech'},
+      { product: "Cheerios", price: 5, category: 'food'},
+    ],
+  
+    [
+      { product: "Snickers", price: 1.5 , category: 'food'},
+      { product: "Air Pods", price: 129, category: 'tech'},
+    ],
+  
+  ]
+
+  function sortProducts (matrix) {
+    let result = {
+      tech: [],
+      food: []
+    };
+
+    matrix.forEach(element => {
+        for (let i=0; i<element.length; i++){
+            if (element[i].category === 'tech'){
+                result.tech.push(element[i]);
+            } else if (element[i].category === 'food'){
+                result.food.push(element[i]);
+            }
+        }  
+    });
+    console.table(result);
+}
+
+sortProducts(matrix);
+
+// Exercise 16
+// Write a function that check if name is an actual contact's firstName and the given property (prop) is a property of that contact.
+
+// Setup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+// SOLUTION
+
+function lookUpProfile(name, prop) {
+contacts.forEach(element => {
+  if (element.firstName === name) {
+      if (prop in element)
+        console.log(element[prop]);
+       else {
+        console.log("No such property");
+      }
+    }
+})
+}
+
+
+lookUpProfile("Akira", "number");
