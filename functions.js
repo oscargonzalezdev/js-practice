@@ -301,3 +301,69 @@ contacts.forEach(element => {
 
 
 lookUpProfile("Akira", "number");
+
+// Exercise 17
+// Create a function called randomRange that takes a range myMin and myMax and returns a random whole number that's greater than or equal to myMin,
+// and is less than or equal to myMax, inclusive.
+
+function randomRange(myMin, myMax) {
+  let range = (myMax - myMin +1);
+  let random = Math.random() * range;
+  console.log(Math.floor(random) + myMin);
+  }
+
+  randomRange(10, 50);
+
+// Exercise 18
+// Use the conditional operator in the checkEqual function to check if two numbers are equal or not.
+// The function should return either the string Equal or the string Not Equal.
+
+function checkEqual(a, b) {
+  let result = (a == b ? 'Equal' : 'Not Equal');
+  console.log(result);
+}
+
+checkEqual(1, 1);
+
+// Exercise 19
+// In the checkSign function, use multiple conditional operators to check if a number is positive, negative or zero.
+// The function should return positive, negative or zero.
+
+function checkSign(num) {
+  let result = (num > 0) ? 'positive'
+  : (num < 0) ? 'negative'
+  : 'zero';
+
+  console.log(result);
+}
+
+checkSign(0);
+
+// Exercise 20
+// Use Recursion to Create a Countdown
+
+function countdown(n){
+  if (n<1){
+    return [];
+  } else {
+    let countArray = countdown(n-1);
+    countArray.unshift(n);
+    return countArray;
+  }
+}
+console.log(countdown (10));
+
+
+// Exercise 21
+// Create a recursive function that count numbers in a range.
+
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum > endNum){
+    return [];
+    } else {
+  let arr = rangeOfNumbers(startNum + 1, endNum);
+  arr.unshift(startNum);
+  return arr;
+    }
+};
+console.log(rangeOfNumbers(5, 12));
