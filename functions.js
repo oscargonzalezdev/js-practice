@@ -367,3 +367,36 @@ function rangeOfNumbers(startNum, endNum) {
     }
 };
 console.log(rangeOfNumbers(5, 12));
+
+
+// Exercise 22
+// Create a function sum using the rest parameter in such a way that the function sum is able to take any number of arguments and return their sum.
+
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
+console.log(sum(1,2,3,4));
+
+// Exercise 23
+// Use destructuring assignment to extract the values of today and tomorrow from the HIGH_TEMPERATURES object and assign them to variables with different names.
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+const {today: heute, tomorrow: morgen} = HIGH_TEMPERATURES;
+console.log(heute, morgen);
+
+// Exercise 24
+// Assign the variables lowToday and highToday the values of today.low and today.high from the LOCAL_FORECAST object.
+
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+  
+const {today: {low: lowToday, high: highToday}} = LOCAL_FORECAST;
+
+console.log(lowToday, highToday);
